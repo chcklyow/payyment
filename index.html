@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 PAYMENT DANAR STORE 🔥</title>
+    <meta name="description" content="Pembayaran Danar Store">
+    
+    <!-- Menghubungkan ke file CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background"></div>
+
+    <!-- Menu Hamburger -->
+    <div class="menu-container">
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+            <a href="https://wa.me/6287879953311">Contact</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">🔥 PAYMENT DANAR STORE 🔥</h1>
+            <p class="subtitle">Penyedia Aplikasi Premium Murah</p>
+        </div>
+
+        <div class="payment-card">
+            <h2 class="card-title">Metode Pembayaran</h2>
+
+            <div class="payment-method">
+                <div class="payment-row" onclick="copyNumber('085669723793')">
+                    <img src="https://img12.pixhost.to/images/937/576359791_arbot.jpg" alt="Dana" class="payment-logo">
+                    <span class="payment-label">DANA</span>
+                    <span class="payment-number">085669723793</span>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <div class="payment-row" onclick="copyNumber('085669723793')">
+                    <img src="https://img12.pixhost.to/images/937/576359842_arbot.jpg" alt="GoPay" class="payment-logo">
+                    <span class="payment-label">GoPay</span>
+                    <span class="payment-number">085669723793</span>
+                </div>
+            </div>
+
+            <div class="payment-method">
+                <div class="payment-row" onclick="copyNumber('085669723793')">
+                    <img src="https://img12.pixhost.to/images/937/576360152_arbot.jpg" alt="ShopeePay" class="payment-logo">
+                    <span class="payment-label">ShopeePay</span>
+                    <span class="payment-number">085669723793</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="qris-section">
+            <h2 class="qris-title">QRIS</h2>
+            <img src="https://img12.pixhost.to/images/921/576080427_arbot.jpg" alt="QRIS" class="qris-image">
+        </div>
+    </div>
+
+    <!-- Pemutar Musik & Copy Number Function -->
+    <script>
+        window.addEventListener('click', function() {
+            let audio = new Audio("https://drive.google.com/uc?export=download&id=1Q3xfen2sjW6NLB9WXS5b0SOQNJcync-E");
+            audio.loop = true;
+            audio.play();
+        }, { once: true });
+
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+        }
+
+        function copyNumber(number) {
+            navigator.clipboard.writeText(number).then(() => {
+                alert("Nomor " + number + " telah disalin!");
+            }).catch(err => {
+                alert("Gagal menyalin nomor: " + err);
+            });
+        }
+    </script>
+</body>
+</html>
